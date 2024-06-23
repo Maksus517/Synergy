@@ -5,7 +5,7 @@ class Humans:
     def set_new_stages(self, stages: list) -> None:
         self.stages = stages
 
-    def print_stages(self, is_new: bool):
+    def print_stages(self, is_new: bool) -> None:
         print("Ваш ответ:") if not is_new else print("Правильный ответ:")
         print(*self.stages, sep=" => ", end="\n\n")
 
