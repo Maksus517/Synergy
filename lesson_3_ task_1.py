@@ -5,11 +5,11 @@ class Animals:
         self.pet_nickname = pet_nickname
 
     def print_animal(self) -> None:
-        print_age: str = self.__check_print_age(self.pet_age)
+        print_age: str = self.__check_print_age()
         print(f'Это {self.pet_type.lower()} по кличке "{self.pet_nickname}". Возраст: {self.pet_age} {print_age}')
 
-    def __check_print_age(self, age: int) -> str:
-        if (2 <= age % 10 <= 4) and not (11 <= self.pet_age % 100 <= 14):
+    def __check_print_age(self) -> str:
+        if (2 <= self.pet_age % 10 <= 4) and not (11 <= self.pet_age % 100 <= 14):
             return "года."
         elif self.pet_age % 10 == 1 and self.pet_age % 100 != 11:
             return "год."
