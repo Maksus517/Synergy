@@ -15,6 +15,5 @@ def main():
     print(f"Согласных - {consonants}")
 
 
-
 if __name__ == '__main__':
     main()
