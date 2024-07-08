@@ -6,7 +6,7 @@ def main():
     for _ in range(n):
         if weights:
             weight = weights[0] + weights[-1]
-            if weight > m:
+            if weight > m or len(weights) == 1:
                 if weights[-1] <= m:
                     count += 1
                 weights.pop(-1)
