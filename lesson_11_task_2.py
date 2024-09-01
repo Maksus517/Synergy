@@ -80,14 +80,6 @@ def delete(pets):
     pets.pop(ID)
 
 
-def get_suffix(pet_age) -> str:
-    if (2 <= pet_age % 10 <= 4) and not (11 <= pet_age % 100 <= 14):
-        return f"{pet_age} года."
-    elif pet_age % 10 == 1 and pet_age % 100 != 11:
-        return f"{pet_age} год."
-    return f"{pet_age}pet_age лет."
-
-
 def main():
     pets: dict[int, dict[str, dict[str, str | int]]] = {}
     while True:
