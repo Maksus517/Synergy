@@ -3,7 +3,7 @@ def check_print_age(pet_age) -> str:
         return f"{pet_age} года."
     elif pet_age % 10 == 1 and pet_age % 100 != 11:
         return f"{pet_age} год."
-    return f"{pet_age}pet_age лет."
+    return f"{pet_age} лет."
 
 
 def main():
