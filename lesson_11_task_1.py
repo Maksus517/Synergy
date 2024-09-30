@@ -4,7 +4,8 @@ def factorial(num: int) -> int:
 
 def main():
     num: int = int(input('Введите число: '))
-    res: list = [factorial(num - i) for i in range(num)]
+    new_num = factorial(num)
+    res: list = [factorial(new_num - i) for i in range(new_num)]
     print(res)
 
 

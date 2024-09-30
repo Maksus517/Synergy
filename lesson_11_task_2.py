@@ -31,6 +31,9 @@ def get_id(pets) -> int | None:
 
 
 def read(pets):
+    if not pets:
+        print("В таблице нет питомцев")
+        return
     pet: dict = get_pet(pets, get_id(pets))
     if not pet:
         print("Нет такого питомца")
@@ -54,12 +57,15 @@ def get_suffix(pet_age) -> str:
 
 
 def update(pets):
+    if not pets:
+        print("В таблице нет питомцев")
+        return
     ID: int = get_id(pets)
     pet: dict = get_pet(pets, ID)
     if not pet:
         print("Нет такого питомца")
         return
-    delete(pets, ID)
+    pets.pop(ID)
     pet_data: dict[str, str | int] = {}
     pet_name: str = input("Введите кличку: ")
     pet_data.setdefault("Вид питомца", input("Введите вид питомца: "))
@@ -76,6 +82,9 @@ def update(pets):
 
 
 def delete(pets):
+    if not pets:
+        print("В таблице нет питомцев")
+        return
     ID: int = get_id(pets)
     pets.pop(ID)
 
