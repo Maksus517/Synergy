@@ -14,7 +14,7 @@ CELL_TYPES = {
     9: '💧',
     10: '🏆',
     11: '💙',
-    12: '🔲',
+    12: '⬛',
 }
 
 
@@ -103,7 +103,7 @@ class Map:
             self.generate_hospital()
 
     @staticmethod
-    def print_stats(helico):
+    def print_stat(helico):
         print(CELL_TYPES[9], helico.tank, '/', helico.mxtank, sep='', end=' | ')
         print(CELL_TYPES[11], helico.lives, end=' | ')
         print(CELL_TYPES[10], helico.score)

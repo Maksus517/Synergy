@@ -45,7 +45,7 @@ def cls():
 
 MOVES = {'w': (-1, 0), 'd': (0, 1), 's': (1, 0), 'a': (0, -1)}
 MAP_WIDTH, MAP_HEIGHT = 15, 15
-TICK_SLEEP = 0.05
+TICK_SLEEP = 0.2
 TREE_UPDATE = 500
 CLOUDS_UPDATE = 250
 FIRE_UPDATE = 100
@@ -57,7 +57,7 @@ tick = 1
 
 while True:
     cls()
-    field.print_stats(helico)
+    field.print_stat(helico)
     field.print_map(helico, clouds)
     helico.process_helicopter(field, clouds)
 
